@@ -19,6 +19,14 @@
                 {
                     foreach (var project in employee.Projects)
                     {
+                        if (Employees[employee.EmployeeId].Projects.Any(x => x.ProjectId == project.ProjectId))
+                        {
+                            Employees[employee.EmployeeId].Projects.First(x => x.ProjectId == project.ProjectId);
+
+                            this.UpdateProjectRecords(employee.EmployeeId, project);
+
+                            continue;
+                        }
                         Employees[employee.EmployeeId].Projects.Add(project);
                     }
                 }
@@ -32,13 +40,29 @@
             return Employees.Values.ToList();
         }
 
+        private void UpdateProjectRecords(int employeeId, ProjectPartial project)
+        {
+            var empToUpdate = Projects[project.ProjectId].ProjectContributors.First(x => x.EmployeeId == employeeId);
+            empToUpdate.DateFrom = project.DateFrom;
+            empToUpdate.DateTo = project.DateTo;
+        }
+
         private void AddProjectInMemory(Employee employee)
         {
             foreach (var project in employee.Projects)
             {
                 if (Projects.ContainsKey(project.ProjectId))
                 {
-                    Projects[project.ProjectId].ProjectContributors.Add(new EmployeePartial() { DateFrom = project.DateFrom, DateTo = project.DateTo, EmployeeId = employee.EmployeeId });
+                    if (Projects[project.ProjectId].ProjectContributors.Any(p => p.EmployeeId == employee.EmployeeId))
+                    {
+                        var dataToUpdate = Projects[project.ProjectId].ProjectContributors.First(p => p.EmployeeId == employee.EmployeeId);
+                        dataToUpdate.DateFrom = project.DateFrom;
+                        dataToUpdate.DateTo = project.DateTo;
+                    }
+                    else
+                    {
+                        Projects[project.ProjectId].ProjectContributors.Add(new EmployeePartial() { DateFrom = project.DateFrom, DateTo = project.DateTo, EmployeeId = employee.EmployeeId });
+                    }
                 }
                 else
                 {

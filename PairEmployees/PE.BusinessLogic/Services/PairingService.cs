@@ -14,6 +14,7 @@
         public PairingService(IRepository repository)
         {
             this.repository = repository;
+
             this.projects = this.repository.GetProjects();
             this.employees = this.repository.GetEmployees();
         }
