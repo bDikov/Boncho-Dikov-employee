@@ -20,3 +20,21 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+/PairEmployees/PE.BusinessLogic/bin/Debug/net6.0
+/PairEmployees/InfrastructureOrchestrator/obj/Debug/net6.0/refint
+/PairEmployees/InfrastructureOrchestrator/obj/Debug/net6.0
+/PairEmployees/InfrastructureOrchestrator/obj
+/PairEmployees/PE.BusinessLogic/obj/Debug/net6.0
+/PairEmployees/PE.BusinessLogic/obj
+/PairEmployees/PE.Common/bin/Debug/net6.0
+/PairEmployees/PE.Repository/bin/Debug/net6.0
+/PairEmployees/PE.Repository/obj/Debug/net6.0
+/PairEmployees/PE.Repository/obj
+/PairEmployees/PE.Serializers/bin/Debug/net6.0
+/PairEmployees/PE.Serializers/obj
+/PairEmployees/PE.Web/bin/Debug/net6.0
+/PairEmployees/PE.Web/obj
+/PairEmployees/PE.Web/wwwroot/lib/bootstrap/dist
+/PairEmployees/PE.Web/wwwroot/lib
+/PairEmployees/PE.Web/wwwroot/js
+/.vs

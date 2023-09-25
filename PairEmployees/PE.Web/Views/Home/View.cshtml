@@ -1,0 +1,45 @@
+﻿@model IEnumerable<InfrastructureOrchestrator.Infrastructure.Models.DTOs.EmployeeDto>
+
+@{
+    ViewData["Title"] = "Employees";
+}
+
+<h5>Employees</h5>
+
+<form method="get" action="@Url.Action("ShowPairs", "Home")">
+    <button type="submit">Show all pairs!</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Projects</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.EmployeeId</td>
+                <td>
+                    <ul>
+                        @foreach (var project in employee.Projects)
+                        {
+                            <li>
+                                <u>
+                                    Project ID: @project.ProjectId<br />
+                                    Date From: @project.DateFrom<br />
+                                    Date To: @project.DateTo
+                                </u>
+                            </li>
+                        }
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><u>***</u></td>
+            </tr>
+        }
+    </tbody>
+</table>

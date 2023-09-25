@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form action="Home/Upload"
+      enctype="multipart/form-data" onsubmit="AJAXSubmit(this);return false;"
+      method="post">
+    <dl>
+        <dt>
+            <label for="file">Please select a csv file and press Update </label>
+        </dt>
+        <dd>
+            <input id="file" type="file"
+                   name="file" />
+        </dd>
+    </dl>
+
+    <input class="btn btn-dark" type="submit" value="Upload" />
+
+    <div style="margin-top:15px">
+        <output name="result"></output>
+    </div>
+</form>
