@@ -22,3 +22,15 @@ C:\Users\boncho.dikov\Desktop\Projects\Permutation\Boncho-Dikov-employee\PairEmp
 C:\Users\boncho.dikov\Desktop\Projects\Permutation\Boncho-Dikov-employee\PairEmployees\PE.Common\obj\Debug\net6.0\refint\PE.Common.dll
 C:\Users\boncho.dikov\Desktop\Projects\Permutation\Boncho-Dikov-employee\PairEmployees\PE.Common\obj\Debug\net6.0\PE.Common.pdb
 C:\Users\boncho.dikov\Desktop\Projects\Permutation\Boncho-Dikov-employee\PairEmployees\PE.Common\obj\Debug\net6.0\ref\PE.Common.dll
+C:\Users\boncho.dikov\Desktop\Projects\Test\Boncho-Dikov-employee\PairEmployees\PE.Common\bin\Debug\net6.0\PE.Common.deps.json
+C:\Users\boncho.dikov\Desktop\Projects\Test\Boncho-Dikov-employee\PairEmployees\PE.Common\bin\Debug\net6.0\PE.Common.dll
+C:\Users\boncho.dikov\Desktop\Projects\Test\Boncho-Dikov-employee\PairEmployees\PE.Common\bin\Debug\net6.0\PE.Common.pdb
+C:\Users\boncho.dikov\Desktop\Projects\Test\Boncho-Dikov-employee\PairEmployees\PE.Common\obj\Debug\net6.0\PE.Common.csproj.AssemblyReference.cache
+C:\Users\boncho.dikov\Desktop\Projects\Test\Boncho-Dikov-employee\PairEmployees\PE.Common\obj\Debug\net6.0\PE.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\boncho.dikov\Desktop\Projects\Test\Boncho-Dikov-employee\PairEmployees\PE.Common\obj\Debug\net6.0\PE.Common.AssemblyInfoInputs.cache
+C:\Users\boncho.dikov\Desktop\Projects\Test\Boncho-Dikov-employee\PairEmployees\PE.Common\obj\Debug\net6.0\PE.Common.AssemblyInfo.cs
+C:\Users\boncho.dikov\Desktop\Projects\Test\Boncho-Dikov-employee\PairEmployees\PE.Common\obj\Debug\net6.0\PE.Common.csproj.CoreCompileInputs.cache
+C:\Users\boncho.dikov\Desktop\Projects\Test\Boncho-Dikov-employee\PairEmployees\PE.Common\obj\Debug\net6.0\PE.Common.dll
+C:\Users\boncho.dikov\Desktop\Projects\Test\Boncho-Dikov-employee\PairEmployees\PE.Common\obj\Debug\net6.0\refint\PE.Common.dll
+C:\Users\boncho.dikov\Desktop\Projects\Test\Boncho-Dikov-employee\PairEmployees\PE.Common\obj\Debug\net6.0\PE.Common.pdb
+C:\Users\boncho.dikov\Desktop\Projects\Test\Boncho-Dikov-employee\PairEmployees\PE.Common\obj\Debug\net6.0\ref\PE.Common.dll

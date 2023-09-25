@@ -34,10 +34,7 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult ShowPairs()
     {
-        //TO DO
-        throw new NotImplementedException();
-        var x =
-            pairingService.GetPairEmployeesProjects();
-        return Ok();
+        var x = pairingService.GetPairEmployeesProjects();
+        return View("PairView", pairingService.GetPairEmployeesProjects());
     }
 }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\boncho.dikov\\Desktop\\Projects\\Permutation\\Boncho-Dikov-employee\\PairEmployees\\PE.Common\\PE.Common.csproj",
+      "projectUniqueName": "C:\\Users\\boncho.dikov\\Desktop\\Projects\\Test\\Boncho-Dikov-employee\\PairEmployees\\PE.Common\\PE.Common.csproj",
       "projectName": "PE.Common",
-      "projectPath": "C:\\Users\\boncho.dikov\\Desktop\\Projects\\Permutation\\Boncho-Dikov-employee\\PairEmployees\\PE.Common\\PE.Common.csproj",
+      "projectPath": "C:\\Users\\boncho.dikov\\Desktop\\Projects\\Test\\Boncho-Dikov-employee\\PairEmployees\\PE.Common\\PE.Common.csproj",
       "packagesPath": "C:\\Users\\boncho.dikov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\boncho.dikov\\Desktop\\Projects\\Permutation\\Boncho-Dikov-employee\\PairEmployees\\PE.Common\\obj\\",
+      "outputPath": "C:\\Users\\boncho.dikov\\Desktop\\Projects\\Test\\Boncho-Dikov-employee\\PairEmployees\\PE.Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\boncho.dikov\\AppData\\Roaming\\NuGet\\NuGet.Config",

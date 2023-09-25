@@ -36,7 +36,11 @@
         {
             var collectionPairs = new List<PairEmployeesProjects>();
             var remainingEmployees = employees.ToList();
-            GetCommonProjectsForEmployeesHelper(project, remainingEmployees, new List<Employee>(), collectionPairs);
+            if (project.ProjectContributors.Count >= 2)
+            {
+                GetCommonProjectsForEmployeesHelper(project, remainingEmployees, new List<Employee>(), collectionPairs);
+            }
+
             return collectionPairs;
         }
 
@@ -44,13 +48,22 @@
         {
             if (currentPair.Count == 2)
             {
-                collectionPairs.Add(new PairEmployeesProjects
+                var totalDaysWorkedTogether = CalculateTotalDaysWorkedTogetherPerProject(currentPair[0], currentPair[1], project.ProjectId);
+                if (totalDaysWorkedTogether > 0)
                 {
-                    ProjectId = project.ProjectId,
-                    EmployeeOneId = currentPair[0].EmployeeId,
-                    EmployeeTwoId = currentPair[1].EmployeeId,
-                    TotalDaysPerProject = CalculateTotalDaysWorkedTogetherPerProject(currentPair[0], currentPair[1], project.ProjectId)
-                });
+                    var pairEmployeesProjects = new PairEmployeesProjects
+                    {
+                        ProjectId = project.ProjectId,
+                        EmployeeOneId = currentPair[0].EmployeeId,
+                        EmployeeTwoId = currentPair[1].EmployeeId,
+                        TotalDaysPerProject = totalDaysWorkedTogether
+                    };
+
+                    if (!collectionPairs.Any(p => p.EmployeeOneId == pairEmployeesProjects.EmployeeTwoId && p.EmployeeTwoId == pairEmployeesProjects.EmployeeOneId))
+                    {
+                        collectionPairs.Add(pairEmployeesProjects);
+                    }
+                }
                 return;
             }
 
@@ -73,11 +86,25 @@
             var dateOneTo = empIdOne.Projects.Where(x => x.ProjectId == projectId).First().DateTo;
             var dateTwoTo = empIdTwo.Projects.Where(x => x.ProjectId == projectId).First().DateTo;
 
+            if (!IsSmallerData(dateOneFrom, dateTwoTo) || !IsSmallerData(dateTwoFrom, dateOneTo))
+            {
+                return 0;
+            }
+
             var dateFrom = this.GetBiggerDate(dateOneFrom, dateTwoFrom);
             var dateTo = this.GetSmallestDate(dateOneTo, dateTwoTo);
 
             TimeSpan duration = dateTo.Subtract(dateFrom);
             return duration.Days;
+        }
+
+        private bool IsSmallerData(DateTime dateStart, DateTime dateEnd)
+        {
+            if (dateStart > dateEnd)
+            {
+                return false;
+            }
+            return true;
         }
 
         public DateTime GetSmallestDate(DateTime date1, DateTime date2)
@@ -89,13 +116,5 @@
         {
             return date1 > date2 ? date1 : date2;
         }
-
-        //private IEnumerable<int> IsThereAMatcH(EmployeePartial partialEmp1, EmployeePartial partEmp2)
-        //{
-        //    var empOne = this.repository.GetEmployees().First(x => x.EmployeeId == partialEmp1.EmployeeId);
-        //    var empTwo = this.repository.GetEmployees().First(x => x.EmployeeId == partEmp2.EmployeeId);
-
-        //    return empOne.Projects.Intersect(empTwo.Projects).Select(p => p.ProjectId);
-        //}
     }
 }
